@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto:200,300,400,700" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<head>
+<title>CODE 1230 Assignment3</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<div class="topnav" id="myTopnav">
+<a title="Return to Homepage" href="#top"><i class="material-icons">home</i></a>
+<a title="Go to Mapbox" href="maps.html" target="_blank">Mapbox</a>
+<a title="Scroll down to Background" href="#Background_page">Background</a>
+<a title="Scroll down to Issue" href="#Issue_page">Issue</a>
+<a title="scroll down to solution" href="#solution_page">solution</a>
+<a title="About us" href="#aboutus">About Us</a>
+<a title="Go to Github" href="https://github.com/sudassana/webpractice" target="_blank">Github</a>
+<a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+
+
+
+<!--<a id="welcome"></a>-->
+<h1>Hi there, welcome to our Assignment 3 website!</h1>
+<p class="par1">
+Made specifically for this assignment only.
+</p>
+
+<p class="par2">
+	Scroll down and enjoy ;) 
+</p>
+
+<h2>Background</h2>
+<p>... </p>
+
+
+<h3>Issue</h3>
+<p>....  
+</p>
+
+<a id="analysis_page"></a>
+<h5>solution</h5>
+<p class="par5">
+....</p>
+</div>
+
+
+<a id="aboutus"></a>
+<h7>About Us</h7>
+<p class="about">Design made by I Nyoman Bagus Sudassana (<i>z5095126</i>)<br><br>
+Website made by Rujian Chen (<i>z5125352</i>)
+</p>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top"><i class="material-icons">arrow_upward</i></button>
+<script>
+	// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0; // For Chrome, Safari and Opera 
+    document.documentElement.scrollTop = 0; // For IE and Firefox
+} </script>
+</body>
+
+</html>

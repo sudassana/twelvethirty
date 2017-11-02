@@ -1,0 +1,169 @@
+body {
+	margin: 0px;
+	background: #eeeeee;
+	
+}
+
+h1  {
+	font-family: 'Roboto'; font-weight: 700;
+	text-align: center;
+	font-size: 36px;
+	line-height: 100px;
+}
+
+p.par1{
+	font-family: 'Roboto'; font-weight: 400;
+	text-align: center;
+	font-size: 20px;
+	margin: 0;
+	padding: 0
+}
+
+p.par2{
+	font-family: 'Roboto'; font-weight: 200;
+	text-align: center;
+	font-size: 20px;
+	margin: 0;
+	padding: 0
+}
+
+h2,h3,h5 {
+	font-family: 'Roboto'; font-weight: 300;
+	text-align: center;
+	font-size: 28px;
+	padding-top: 2px; padding-bottom: 2px;
+}
+
+h5 {
+	font-family: 'Roboto'; font-weight: 300;
+	text-align: center;
+	font-size: 28px;
+	padding-top: 2px; padding-bottom: 2px;
+	margin-top: 20px; margin-bottom: 25px
+}
+
+h6 {
+	font-family: 'Roboto'; font-weight: 300;
+	text-align: center;
+	font-size: 28px;
+	padding-top: 0px; padding-bottom: 2px;
+	margin-top: 5px; margin-bottom: 20px
+
+}
+
+
+
+
+p {
+	padding-left: 30px; padding-right: 30px;
+	margin: 0;
+	font-size: 18px;
+	font-family: 'Roboto'; font-weight: 500;
+	text-align: center;
+
+}
+
+p.par5,p.par6 {
+	padding-left: 30px; padding-right: 30px;
+	margin-bottom: 20px;
+	font-size: 18px;
+	font-family: 'Roboto'; font-weight: 500;
+	text-align: center;
+
+}
+
+p.about {
+	font-family: 'Roboto'; font-weight: 300;
+	font-size: 12px;
+	text-align: left;
+	padding-top: 10px; padding-left: 0px; 
+	line-height: 0.7;
+}
+
+footer {
+	position: fixed;
+	bottom: 0;
+	font-size: 18px;
+	font-family: 'Roboto ', sans-serif;
+	background: black;
+}
+.main{
+	margin-top: 0.5px;
+	width: 100%;
+}
+.topnav{
+	top: 0;
+	width: 100%;
+	transition: top 0.2s ease-in-out;
+	background: #6B8E23;
+/*	overflow: hidden;*/
+	position: fixed;
+	display: block;
+}
+
+.topnav a {
+	float: left;
+	display: block;
+	color: #FFFFFF;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-family: 'Roboto', sans-serif;
+	font-size: 18px;
+}
+
+.topnav a:hover {
+	background-color:#20B2AA;
+	color: white;
+	display: block;
+	height: 30px;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 720px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .responsive {position: fixed;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+	}
+}
+
+#myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 10px; /* Place the button at the bottom of the page */
+    right: 10px; /* Place the button 30px from the right */
+    z-index: 100; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #f50057; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 50px; /* Rounded corners */
+}
+
+#myBtn:hover {
+    background-color: #ff5983; /* Add a dark-grey background on hover */
+}
+
+button {
+	color: #f50057;
+}
