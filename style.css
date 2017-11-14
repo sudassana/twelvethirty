@@ -38,6 +38,7 @@ h2,h4{
 	padding-left: 70px; padding-right: 30px;
 }
 
+/*
 h5 {
 	font-family: 'Open Sans'; font-weight: 300;
 	text-align: center;
@@ -45,6 +46,7 @@ h5 {
 	padding-top: 2px; padding-bottom: 2px;
 	margin-top: 20px; margin-bottom: 25px
 }
+*/
 
 h6 {
 	font-family: 'Open Sans'; font-weight: 300;
@@ -65,6 +67,7 @@ img.back {
 	width: 30%;
 	margin-left: 150px;
 	border-radius: 15px;
+	border: solid #00C853 thick;
 }
 
 img.iss {
@@ -72,6 +75,7 @@ img.iss {
 	width: 30%;
 	margin-right: 150px;
 	border-radius: 15px;
+	border: solid #00C853 thick;
 }
 
 img.sol {
@@ -79,6 +83,7 @@ img.sol {
 	width: 25%;
 	margin-left: 150px;
 	border-radius: 15px;
+	border: solid #00C853 thick;
 }
 img.pres1 {
 	width: 30%;
@@ -162,6 +167,7 @@ iframe {
 	height: 800px;
 	margin-left: 10%;
 	margin-right: 10%;
+	border: solid #00C853 thick;
 }
 
 .main{
