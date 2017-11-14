@@ -64,7 +64,7 @@ h7 {
 
 img.back {
 	float: left;
-	width: 30%;
+	width: 28%;
 	margin-left: 150px;
 	border-radius: 15px;
 	border: solid #00C853 thick;
@@ -72,7 +72,7 @@ img.back {
 
 img.iss {
 	float: right;
-	width: 30%;
+	width: 25%;
 	margin-right: 150px;
 	border-radius: 15px;
 	border: solid #00C853 thick;
@@ -182,7 +182,7 @@ iframe {
 /*	overflow: hidden;*/
 	position: fixed;
 	display: block;
-	box-shadow: 10px 5px 20px 0 #c2c2c2;
+	box-shadow: 10px 2px 20px 0px #c2c2c2;
 }
 
 .topnav a {
