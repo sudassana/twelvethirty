@@ -1,58 +1,147 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
-<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto:200,300,400,700" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Source+Sans+Pro:600" rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <link rel="stylesheet" type="text/css" href="style.css">
 
 <head>
-<title>CODE 1230 Assignment3</title>
+<title>CODE 1230</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <div class="topnav" id="myTopnav">
 <a title="Return to Homepage" href="#top"><i class="material-icons">home</i></a>
-<a title="Go to Mapbox" href="maps.html" target="_blank">Mapbox</a>
-<a title="Scroll down to Background" href="#Background_page">Background</a>
-<a title="Scroll down to Issue" href="#Issue_page">Issue</a>
-<a title="scroll down to solution" href="#solution_page">solution</a>
-<a title="About us" href="#aboutus">About Us</a>
-<a title="Go to Github" href="https://github.com/sudassana/webpractice" target="_blank">Github</a>
+<a title="Scroll down to Background" href="#background">Background</a>
+<a title="Scroll down to Issue" href="#issue_page">Issue</a>
+<a title="Scroll down to Solution" href="#solution_page">Solution</a>
+<a title="Scroll down to Mapbox" href="#mapbox">Mapbox</a>
+<!--<a title="Change to dark mode" href="mode.html" style="float: right"><i class="material-icons">brightness_4</i></a>-->
+<a title="Go to Github" href="https://github.com/sudassana/twelvethirty" target="_blank">Github</a>
 <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
 </div>
 
+<script>
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+</script>
 
+<body>
+<a id="top"></a>
+<div class="main" id="mymain"></div>
+<img src="Images/welcome.jpg" alt="home" style="width: 100%">
 
-<!--<a id="welcome"></a>-->
-<h1>Hi there, welcome to our Assignment 3 website!</h1>
-<p class="par1">
-Made specifically for this assignment only.
+<script>
+// SMOOTH TRANSITION
+$('a[href*="#"]')
+  // Remove links that don't actually link to anything
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function(event) {
+    // On-page links
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+      && 
+      location.hostname == this.hostname
+    ) {
+      // Figure out element to scroll to
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      // Does a scroll target exist?
+      if (target.length) {
+        // Only prevent default if animation is actually gonna happen
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000, function() {
+          // Callback after animation
+          // Must change focus!
+          var $target = $(target);
+          $target.focus();
+          if ($target.is(":focus")) { // Checking if the target was focused
+            return false;
+          } else {
+            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+            $target.focus(); // Set focus again
+          };
+        });
+      }
+    }
+  });
+	</script>
+
+<a id="background"></a>
+<h1>Background</h1>
+<img class="back" src="images/back1.png" alt="background">
+<p class="par1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam interdum nulla id libero congue rhoncus. Duis quam mi, cursus eu sem tempus, luctus pulvinar velit. Nullam cursus at magna eget placerat. Mauris vestibulum ante vel nunc eleifend, hendrerit molestie enim euismod. Nunc orci tortor, pellentesque a sapien sed, condimentum vestibulum ex. Duis hendrerit libero vel vestibulum vulputate. Vivamus a lacus ac lacus ornare pellentesque quis eget enim. Sed eget fringilla dolor. Mauris non enim ante. Pellentesque quis tellus eget purus hendrerit rutrum. Curabitur sollicitudin eleifend mi, sed hendrerit orci. Aenean porttitor odio nec neque vestibulum, ac venenatis lorem scelerisque. Nunc pharetra ullamcorper sem, vitae porttitor ligula. Vestibulum luctus nunc ullamcorper eros pretium, porttitor pharetra eros tincidunt. Vestibulum et tellus at odio ornare egestas. Ut vulputate sodales nisi non facilisis.<br><br>
+
+Aenean dignissim leo ultrices nibh tincidunt interdum. Ut euismod lorem eu sem facilisis vehicula. Nunc in felis vel odio ultrices consectetur vel ac ipsum. Maecenas pretium leo non ligula tempus interdum. Quisque feugiat dui nec dui cursus ornare. Vivamus nulla lacus, malesuada ut ante id, blandit commodo tortor. Phasellus vestibulum nunc a semper porta. In quis ornare ex, sed aliquet dolor. Phasellus nisi lectus, rutrum vel dui quis, ornare dictum arcu.</p>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+
+<div class="set2">
+<a id="issue_page"></a>
+<h2>Issue</h2>
+<img class="iss" src="images/issue.png" alt="issue">
+<p class="par2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit enim quis enim rhoncus, ac iaculis neque consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut mi eget urna maximus sagittis et quis enim. Cras vulputate neque nunc, non placerat nibh lacinia eu. Praesent et risus dapibus, commodo purus in, pharetra ex. Curabitur diam velit, fermentum malesuada odio sit amet, pellentesque dictum nunc. Nam cursus mollis dui, eu volutpat odio dignissim id. Aliquam sed nunc nec mi posuere laoreet. Sed rutrum consectetur consequat. Sed malesuada nulla sed magna egestas euismod. Etiam tincidunt consequat porta. Donec lacinia augue vitae lacus lacinia laoreet. Phasellus vel massa sed justo maximus condimentum ut eu quam.<br><br>
+
+Duis justo diam, viverra lobortis urna quis, gravida placerat lorem. Sed scelerisque lacus ut posuere ultricies. Nullam sem dolor, pulvinar ut lobortis interdum, interdum ac mauris. Vestibulum dictum lectus id arcu suscipit imperdiet. Curabitur ut ante consequat, vestibulum mauris eu, elementum est. Quisque vitae mattis tortor. Nullam quis condimentum orci. Phasellus accumsan arcu non tristique sagittis. Morbi elementum ligula ac magna aliquam, non mattis nisi sodales. Nullam hendrerit risus non risus faucibus lobortis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam imperdiet justo id dui cursus tempus. Quisque vel quam at nulla dictum porta. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus vulputate porta dolor.<br><br>
+
+Maecenas eget cursus arcu, quis sodales magna. Sed ultricies lorem nisi, eget elementum sem vulputate nec. Donec porta viverra malesuada. Praesent.  
 </p>
-
-<p class="par2">
-	Scroll down and enjoy ;) 
-</p>
-
-<h2>Background</h2>
-<p>... </p>
-
-
-<h3>Issue</h3>
-<p>....  
-</p>
-
-<a id="analysis_page"></a>
-<h5>solution</h5>
-<p class="par5">
-....</p>
+<br><br>
+<br><br>
 </div>
 
+<a id="solution_page"></a>
+<h3>Solution</h3>
+<img src="images/render.png" alt="solution" class="sol" width="">
+<p class="par1">
+Vivamus vel scelerisque turpis. Ut a venenatis lacus. Nam tempor libero ut urna venenatis, et accumsan nibh fringilla. Quisque auctor enim aliquam sapien dapibus, sed tincidunt ante bibendum. Aliquam at consequat diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin vulputate ut arcu at blandit. Aenean nec justo lacinia, ultrices nisi vel, consectetur enim. Nullam eu neque eu odio sollicitudin aliquam.<br><br>
 
-<a id="aboutus"></a>
+Sed vel lorem arcu. Praesent vel felis vel justo rutrum egestas. Sed porta faucibus rutrum. Donec porttitor semper finibus. Fusce sagittis semper sem vitae tempus. Aliquam nibh elit, consequat at sapien vel, tincidunt lobortis sem. Curabitur volutpat, arcu id ullamcorper ullamcorper, augue nunc molestie risus, vel tincidunt quam velit et augue. Maecenas metus felis, interdum a volutpat vitae, semper et felis.<br><br>
+
+Aliquam quis mi id mi gravida tincidunt. Aliquam eleifend efficitur massa, id hendrerit turpis tincidunt malesuada. Nunc dapibus, dui vel porttitor hendrerit.</p>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+
+<div class="set4">
+<h4>Precedent Images</h4>
+<img class="pres1" src="images/pre1.png">
+<img class="pres2" src="images/pre2.png">
+<img class="pres3" src="images/pre3.png">
+<img class="pres4" src="images/pre4.png">
+<img class="pres5" src="images/pre5.png">
+<img class="pres6" src="images/pre6.png">
+</div>
+
+<h5>Materials</h5>
+<img class="pres4" src='images/mat.jpg.png'>
+<img class="pres5" src="images/mat2.jpg.png">
+<img class="pres6" src="images/mat3.png">
+
+<div class="set6">
+<a id="mapbox"></a>
+<h6>Mapbox</h6>
+<p class="par6">GEOJSON 3D visualisation into Mapbox </p>
+<iframe src="maps0.html"></iframe>
+<br><br>
+<br><br>
+</div>
+
 <h7>About Us</h7>
-<p class="about">Design made by I Nyoman Bagus Sudassana (<i>z5095126</i>)<br><br>
-Website made by Rujian Chen (<i>z5125352</i>)
-</p>
+<p class="about">Website by I Nyoman Bagus Sudassana (z5095126)<br>
+Texts made by Rujian Chen (z5125352)</p>
 
 <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="material-icons">arrow_upward</i></button>
 <script>
@@ -73,5 +162,5 @@ function topFunction() {
     document.documentElement.scrollTop = 0; // For IE and Firefox
 } </script>
 </body>
-
+<!--<footer>Test</footer>-->
 </html>

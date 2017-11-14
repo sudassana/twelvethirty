@@ -10,17 +10,17 @@
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.39.1/mapbox-gl.css' rel='stylesheet' />
     <style>
         body { margin:0; padding:0; }
-        #map { position: absolute; top: 0; bottom: 0; width:75%; height: 150%}
+        #map { position: absolute; top: 0; bottom: 0; width:100%; height: 100%}
     </style>
 </head>
 <body>
 
-<div class="sidebar" style="width: 25%;float: right">
+<!--<div class="sidebar" style="width: 25%;float: right">-->
 
 </div>
 
 <div id="map"></div>
-<div class='map-overlay' id='legend'></div>
+<!--<div class='map-overlay' id='legend'></div>-->
 <script>
 mapboxgl.accessToken = 'pk.eyJ1Ijoic3VkYXNzYW5hIiwiYSI6ImNqNnV4M3RhZDB1cnYycXJwM3pjbTdrYmYifQ.T6i_IfKswKrUNMbt1d6TEg';
 if (!mapboxgl.supported()) {
@@ -28,33 +28,32 @@ if (!mapboxgl.supported()) {
 } else {
 var map = new mapboxgl.Map({
 	container: 'map', // container id
-	style: 'mapbox://styles/sudassana/cj6vnglfg476e2rnyd4g1kq61', // stylesheet location
-	center: [151.209900, -33.865143], // starting position [lng, lat]
-	zoom: 10, // starting zoom
+	style: 'mapbox://styles/sudassana/cj6vnc78u5qs12rntc922xt00', // stylesheet location
+	center: [151.133058, -33.907914], // starting position [lng, lat]
+	zoom: 13, // starting zoom
     pitch: 40,
     bearing: 20
 });
-
 map.addControl(new mapboxgl.FullscreenControl());
 map.addControl(new mapboxgl.NavigationControl());
 }
 map.on('load', function() {
-var layers=['-1.00-0','0-0.50','0.50-1.00','1.00-30.00'];
-var colors=['black','red','yellow','green','blue'];
-for (i = 0; i < layers.length; i++) {
-  var layer = layers[i];
-  var color = colors[i];
-  var item = document.createElement('div');
-  var key = document.createElement('span');
-  key.className = 'legend-key';
-  key.style.backgroundColor = color;
-
-  var value = document.createElement('span');
-  value.innerHTML = layer;
-  item.appendChild(key);
-  item.appendChild(value);
-  legend.appendChild(item);
-}	
+//var layers=['-1.00-0','0-0.50','0.50-1.00','1.00-30.00'];
+//var colors=['black','red','yellow','green','blue'];
+//for (i = 0; i < layers.length; i++) {
+//  var layer = layers[i];
+//  var color = colors[i];
+//  var item = document.createElement('div');
+//  var key = document.createElement('span');
+//  key.className = 'legend-key';
+//  key.style.backgroundColor = color;
+//
+//  var value = document.createElement('span');
+//  value.innerHTML = layer;
+//  item.appendChild(key);
+//  item.appendChild(value);
+//  legend.appendChild(item);
+//}	
     map.addLayer({
         'id': 'data',
         'type': 'fill-extrusion',
@@ -62,7 +61,7 @@ for (i = 0; i < layers.length; i++) {
             // Geojson Data source used in vector tiles, documented at
             // https://gist.github.com/ryanbaumann/a7d970386ce59d11c16278b90dde094d
             'type': 'geojson',
-            'data': 'NSW.geojson'
+            'data': 'AS3.geojson'
         },
 		
         'paint': {
@@ -70,24 +69,19 @@ for (i = 0; i < layers.length; i++) {
             // https://www.mapbox.com/mapbox-gl-style-spec/#types-function
             'fill-extrusion-color': {
                 // Get the fill-extrusion-color from the source 'color' property.
-                'property': 'uni_diff',
-                'stops': [
-					[-1, "black"],
-					[0, "red"],
-					[0.5, "yellow"],
-					[1, "green"],
-					[30, "blue"]
-				]
+                'property': 'colour',
+                'type': 'identity'
             },
             'fill-extrusion-height': {
                 // Get fill-extrusion-height from the source 'height' property.
-                'property': 'uni_prop',
-                'stops': [
-					[0.2,0],
-					[1,10000]
-				]
+                'property': 'height',
+                'type': 'identity'
             },
-            'fill-extrusion-base': 0,
+            'fill-extrusion-base': {
+                // Get fill-extrusion-base from the source 'base_height' property.
+                'property': 'base_height',
+                'type': 'identity'
+            },
             // Make extrusions slightly opaque for see through indoor walls.
             'fill-extrusion-opacity': 0.8
        	}
